@@ -3,24 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Daniel's Blog</title>
+    <title>Personal Blog</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 <body>
-    <form>
-        <h2>What's on your mind?</h2>
-        <div>
-            <label>Username</label>
-            <input id="username"></input>
-        </div>
-        <div>
-            <label>Title</label>
-            <input id="title"></input>
-        </div>
-        <div>
-            <label>Content</label>
-            <textarea id="content"></textarea>
-        </div>
-        <button type="submit">Submit</button>
-    </form>
+    <div class="container">
+        <header>
+            <h1>Personal Blog</h1>
+        </header>
+        <main>
+            <form id="blogForm">
+                <label for="username">Username:</label>
+                <input type="text" id="username" required>
+                <label for="title">Blog Title:</label>
+                <input type="text" id="title" required>
+                <label for="content">Blog Content:</label>
+                <textarea id="content" required></textarea>
+                <button type="submit">Submit</button>
+                <p id="formMessage" class="hidden">Please complete the form.</p>
+            </form>
+        </main>
+    </div>
+    <script src="assets/js/form.js"></script>
+    <script src="assets/js/logic.js"></script>
 </body>
 </html>
