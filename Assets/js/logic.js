@@ -5,8 +5,9 @@ toggleTheme.addEventListener("click", function() {
 
     // Change button content based on theme
     if (document.body.classList.contains("dark-theme")) {
-        toggleTheme.innerHTML = "☀️"; // Moon emoji for dark mode
+        toggleTheme.innerHTML = "☀️"; // sun emoji for dark mode
     } else {
-        toggleTheme.innerHTML = "🌙"; // Sun emoji for light mode
+        toggleTheme.innerHTML = "🌙"; // moon emoji for light mode
     }
 });
+console.log(toggleTheme); // Log toggleTheme to the console
