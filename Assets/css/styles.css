@@ -63,3 +63,34 @@ button {
     margin-bottom: 10px;
 }
 
+.switch {
+    font-size: 24px; /* Adjust font size */
+    margin-left: 10px; /* Add margin between button and other elements */
+    cursor: pointer;
+    background-color: transparent; /* Remove background color */
+    border: none; /* Remove border */
+    color: #007bff; /* Set default color */
+    transition: color 0.3s ease; /* Add transition for smooth color change */
+}
+
+/* Dark mode styles for the button */
+.dark-theme {
+    background-color: #333; /* Dark background color */
+    color: #ffff; /* Light text color for better contrast */
+}
+
+.dark-theme input[type="text"],
+.dark-theme textarea {
+    background-color: #444; /* Darker background color for input fields */
+    color: #333; /* Light text color for input fields */
+    border: 1px solid #555; /* Darker border color for input fields */
+}
+
+/* Dark mode styles for form labels */
+.dark-theme label {
+    color: #fff; /* Light text color for labels */
+}
+
+.dark-theme .post {
+    background-color: #444;
+}
