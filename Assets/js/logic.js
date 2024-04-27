@@ -1,13 +1,31 @@
+// Check for user's theme preference in localStorage
+const savedTheme = localStorage.getItem("theme");
+
 // Theme toggle
 const toggleTheme = document.getElementById("toggleTheme");
-toggleTheme.addEventListener("click", function() {
-    document.body.classList.toggle("dark-theme");
 
-    // Change button content based on theme
-    if (document.body.classList.contains("dark-theme")) {
-        toggleTheme.innerHTML = "☀️"; // sun emoji for dark mode
+// Function to toggle theme and update localStorage
+function updateTheme(isDarkMode) {
+    if (isDarkMode) {
+        document.body.classList.add("dark-theme");
+        toggleTheme.innerHTML = "☀️"; // Moon emoji for dark mode
+        localStorage.setItem("theme", "dark");
     } else {
-        toggleTheme.innerHTML = "🌙"; // moon emoji for light mode
+        document.body.classList.remove("dark-theme");
+        toggleTheme.innerHTML = "🌙"; // Sun emoji for light mode
+        localStorage.setItem("theme", "light");
     }
+}
+
+if (savedTheme === "dark") {
+    // Apply dark mode if user prefers it
+    updateTheme(true);
+} else {
+    // Apply light mode by default
+    updateTheme(false);
+}
+
+toggleTheme.addEventListener("click", function() {
+    const isDarkMode = document.body.classList.contains("dark-theme");
+    updateTheme(!isDarkMode);
 });
-console.log(toggleTheme); // Log toggleTheme to the console
